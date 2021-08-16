@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "fridaysupportofficial"
+          find: "friday_on_cmd"
 
-          replace: "speedoub"
+          replace: "speedo_on_cmd"
 
       - name: Create Pull Request
 
