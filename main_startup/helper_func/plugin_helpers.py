@@ -18,7 +18,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from pymediainfo import MediaInfo
 
-from main_startup.core.startup_helpers import run_cmd
+from main_start.core.startup_helpers import run_cmd
 
 
 def generate_meme(

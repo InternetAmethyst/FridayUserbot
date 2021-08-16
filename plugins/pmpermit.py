@@ -20,11 +20,11 @@ from database.bot_settings_db import (
     set_pm_spam_limit,
 )
 from database.pmdb import approve_user, disapprove_user, is_user_approved
-from main_startup.core.decorators import friday_on_cmd, listen
-from main_startup import Config
-from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
-from main_startup.helper_func.logger_s import LogIt
-from main_startup.helper_func.plugin_helpers import convert_to_image
+from main_start.core.decorators import friday_on_cmd, listen
+from main_start import Config
+from main_start.helper_func.basic_helpers import edit_or_reply, get_text
+from main_start.helper_func.logger_s import LogIt
+from main_start.helper_func.plugin_helpers import convert_to_image
 
 PM_WARNS = {}
 OLD_MSG = {}

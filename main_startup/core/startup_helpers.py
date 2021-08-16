@@ -10,7 +10,7 @@ import asyncio
 import glob
 import importlib
 import logging
-from main_startup import Config
+from main_start import Config
 import ntpath
 import shlex
 from typing import Tuple

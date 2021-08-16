@@ -15,9 +15,9 @@ from functools import wraps
 import heroku3
 from pyrogram.types import ChatPermissions
 
-from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.basic_helpers import (
+from main_start.config_var import Config
+from main_start.core.decorators import friday_on_cmd
+from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
     get_text,

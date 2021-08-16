@@ -9,8 +9,8 @@
 import logging
 import os
 
-from main_startup import Config
-from main_startup.helper_func.basic_helpers import edit_or_send_as_file
+from main_start import Config
+from main_start.helper_func.basic_helpers import edit_or_send_as_file
 
 
 class LogIt:

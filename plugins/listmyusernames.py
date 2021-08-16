@@ -8,8 +8,8 @@
 
 import pyrogram
 
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.basic_helpers import edit_or_reply, edit_or_send_as_file
+from main_start.core.decorators import friday_on_cmd
+from main_start.helper_func.basic_helpers import edit_or_reply, edit_or_send_as_file
 
 
 @friday_on_cmd(

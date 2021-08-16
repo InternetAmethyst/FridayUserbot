@@ -17,13 +17,13 @@ from database.blacklistdb import (
     get_chat_blacklist,
     is_blacklist_in_db,
 )
-from main_startup.core.decorators import friday_on_cmd, listen
-from main_startup.helper_func.basic_helpers import (
+from main_start.core.decorators import friday_on_cmd, listen
+from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
     get_text,
 )
-from main_startup.helper_func.logger_s import LogIt
+from main_start.helper_func.logger_s import LogIt
 
 
 @friday_on_cmd(

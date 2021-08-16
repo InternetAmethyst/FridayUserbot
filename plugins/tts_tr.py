@@ -16,8 +16,8 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from langdetect import detect
 
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.basic_helpers import edit_or_reply, get_text, run_in_exc
+from main_start.core.decorators import friday_on_cmd
+from main_start.helper_func.basic_helpers import edit_or_reply, get_text, run_in_exc
 
 @run_in_exc
 def tr(text, lang):

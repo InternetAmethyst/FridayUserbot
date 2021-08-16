@@ -69,8 +69,8 @@ $ python(3) -m main_startup
 ### Plugins 🔧
 
 ```python3
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.basic_helpers import edit_or_reply
+from main_start.core.decorators import friday_on_cmd
+from main_start.helper_func.basic_helpers import edit_or_reply
 
 @friday_on_cmd(['helloworld'],
     cmd_help={
@@ -83,7 +83,7 @@ async def hello_world(client, message):
 ### Custom Filters 📣
 
 ```python3
-from main_startup.core.decorators import listen
+from main_start.core.decorators import listen
 
 @listen(filters.mentioned)
 async def mentioned_(client, message):

@@ -22,13 +22,13 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from database.bot_users import add_user, check_user, get_all_users
-from main_startup import bot, start_time
-from main_startup.config_var import Config
-from main_startup.helper_func.assistant_helpers import (
+from main_start import bot, start_time
+from main_start.config_var import Config
+from main_start.helper_func.assistant_helpers import (
     _check_admin,
     _check_owner_or_sudos,
 )
-from main_startup.helper_func.basic_helpers import get_all_pros, get_readable_time
+from main_start.helper_func.basic_helpers import get_all_pros, get_readable_time
 
 
 @bot.on_message(filters.command(["start"]) & filters.incoming)

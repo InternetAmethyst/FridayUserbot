@@ -9,9 +9,9 @@
 from pyrogram import filters
 
 from database.notesdb import add_note, all_note, del_note, del_notes, note_info
-from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd, listen
-from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
+from main_start.config_var import Config
+from main_start.core.decorators import friday_on_cmd, listen
+from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 
 
 @friday_on_cmd(

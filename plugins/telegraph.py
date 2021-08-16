@@ -11,9 +11,9 @@ import os
 
 from telegraph import Telegraph, exceptions, upload_file
 
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
-from main_startup.helper_func.plugin_helpers import convert_to_image
+from main_start.core.decorators import friday_on_cmd
+from main_start.helper_func.basic_helpers import edit_or_reply, get_text
+from main_start.helper_func.plugin_helpers import convert_to_image
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name="FridayUserBot")

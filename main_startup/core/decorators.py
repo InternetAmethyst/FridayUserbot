@@ -22,7 +22,7 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.handlers import MessageHandler
 
-from main_startup import (
+from main_start import (
     CMD_LIST,
     XTRA_CMD_LIST,
     Config,
@@ -32,9 +32,9 @@ from main_startup import (
     Friday4,
     bot
 )
-from main_startup.config_var import Config
-from main_startup.helper_func.basic_helpers import is_admin_or_owner
-from main_startup.core.helpers import edit_or_reply
+from main_start.config_var import Config
+from main_start.helper_func.basic_helpers import is_admin_or_owner
+from main_start.core.helpers import edit_or_reply
 from database.sudodb import sudo_list
 
 from bot_utils_files.Localization.engine import Engine as engin_e

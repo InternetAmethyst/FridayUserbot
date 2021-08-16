@@ -9,16 +9,16 @@
 
 from pyrogram import filters
 
-from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd, listen
-from main_startup.helper_func.basic_helpers import (
+from main_start.config_var import Config
+from main_start.core.decorators import friday_on_cmd, listen
+from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
     get_text,
     get_user,
     iter_chats,
 )
-from main_startup.helper_func.logger_s import LogIt
+from main_start.helper_func.logger_s import LogIt
 from database.sudodb import is_user_sudo, sudo_list, add_sudo, rm_sudo
 from plugins import devs_id
 

@@ -11,8 +11,8 @@ import os
 import yaml     
 import pathlib
 from database.localdb import check_lang
-from main_startup.config_var import Config
-from main_startup import (
+from main_start.config_var import Config
+from main_start import (
     CMD_LIST,
     XTRA_CMD_LIST,
     Config,

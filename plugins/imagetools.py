@@ -24,11 +24,11 @@ from PIL import Image, ImageDraw, ImageFont
 from pygifsicle import optimize
 from telegraph import Telegraph, exceptions, upload_file
 
-from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.core.startup_helpers import run_cmd
-from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
-from main_startup.helper_func.plugin_helpers import (
+from main_start.config_var import Config
+from main_start.core.decorators import friday_on_cmd
+from main_start.core.startup_helpers import run_cmd
+from main_start.helper_func.basic_helpers import edit_or_reply, get_text
+from main_start.helper_func.plugin_helpers import (
     convert_to_image,
     convert_image_to_image_note,
     convert_vid_to_vidnote,

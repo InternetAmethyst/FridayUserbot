@@ -14,7 +14,7 @@ from database.chatbot_db import (
     rm_blacklisted_user,
 )
 from database.chatbot_msg_db import add_msg_in_db, get_user_id_frm_msg_id
-from main_startup.__main__ import Friday, bot
+from main_start.__main__ import Friday, bot
 
 
 async def my_id_(f, client, message):

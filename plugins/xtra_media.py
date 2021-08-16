@@ -19,9 +19,9 @@ from bs4 import BeautifulSoup
 from PIL import Image
 from pyrogram.types import InputMediaPhoto
 
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.basic_helpers import edit_or_reply, get_text, runcmd, run_in_exc
-from main_startup.helper_func.gmdl import googleimagesdownload
+from main_start.core.decorators import friday_on_cmd
+from main_start.helper_func.basic_helpers import edit_or_reply, get_text, runcmd, run_in_exc
+from main_start.helper_func.gmdl import googleimagesdownload
 
 opener = urllib.request.build_opener()
 useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Mobile Safari/537.36"

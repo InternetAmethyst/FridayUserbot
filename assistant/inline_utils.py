@@ -36,11 +36,11 @@ from pyrogram.types import (
     InputTextMessageContent,
 )
 from tinydb import Query, TinyDB
-from main_startup.core.startup_helpers import run_cmd
-from main_startup import CMD_LIST, XTRA_CMD_LIST, Friday, bot, friday_version
-from main_startup.config_var import Config
+from main_start.core.startup_helpers import run_cmd
+from main_start import CMD_LIST, XTRA_CMD_LIST, Friday, bot, friday_version
+from main_start.config_var import Config
 from youtubesearchpython import SearchVideos
-from main_startup.helper_func.basic_helpers import (
+from main_start.helper_func.basic_helpers import (
     cb_wrapper,
     humanbytes,
     get_all_pros,
@@ -49,7 +49,7 @@ from main_startup.helper_func.basic_helpers import (
 )
 
 import os
-from main_startup.helper_func.assistant_helpers import _dl, download_yt
+from main_start.helper_func.assistant_helpers import _dl, download_yt
 from pyrogram.types import InputMediaDocument, InputMediaVideo, InputMediaAudio
 from googletrans import LANGUAGES
 

@@ -23,9 +23,9 @@ from pyrogram.types import (
     InputTextMessageContent,
     Message,
 )
-from main_startup import Friday, Friday2, Friday3, Friday4
+from main_start import Friday, Friday2, Friday3, Friday4
 from database.sudodb import sudo_list
-from main_startup.config_var import Config
+from main_start.config_var import Config
 import multiprocessing
 import mimetypes
 import functools

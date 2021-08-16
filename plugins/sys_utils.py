@@ -18,9 +18,9 @@ from os import environ, execle, path, remove
 import psutil
 from pyrogram import __version__
 
-from main_startup import Config, friday_version, start_time
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.basic_helpers import (
+from main_start import Config, friday_version, start_time
+from main_start.core.decorators import friday_on_cmd
+from main_start.helper_func.basic_helpers import (
     delete_or_pass,
     edit_or_reply,
     get_readable_time,

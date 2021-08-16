@@ -14,7 +14,7 @@ import pyrogram
 from pyrogram import __version__
 from bot_utils_files.Localization.engine import Engine
 from database.localdb import check_lang
-from main_startup import (
+from main_start import (
     Friday,
     Friday2,
     Friday3,
@@ -23,7 +23,7 @@ from main_startup import (
     friday_version,
     mongo_client,
 )
-from main_startup.core.startup_helpers import (
+from main_start.core.startup_helpers import (
     load_plugin,
     load_xtra_mod,
     plugin_collecter,

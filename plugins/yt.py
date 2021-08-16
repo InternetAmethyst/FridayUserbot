@@ -13,9 +13,9 @@ import requests
 import wget
 from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
-from main_startup.core.decorators import friday_on_cmd
-from main_startup.helper_func.assistant_helpers import _dl
-from main_startup.helper_func.basic_helpers import edit_or_reply, get_text, progress, humanbytes, run_in_exc, time_formatter
+from main_start.core.decorators import friday_on_cmd
+from main_start.helper_func.assistant_helpers import _dl
+from main_start.helper_func.basic_helpers import edit_or_reply, get_text, progress, humanbytes, run_in_exc, time_formatter
 import threading
 from concurrent.futures import ThreadPoolExecutor
 from pyrogram.errors import FloodWait, MessageNotModified

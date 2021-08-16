@@ -12,10 +12,10 @@ from datetime import datetime
 from pyrogram import filters
 
 from database.afk import check_afk, go_afk, no_afk
-from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd, listen
-from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
-from main_startup.helper_func.logger_s import LogIt
+from main_start.config_var import Config
+from main_start.core.decorators import friday_on_cmd, listen
+from main_start.helper_func.basic_helpers import edit_or_reply, get_text
+from main_start.helper_func.logger_s import LogIt
 afk_sanity_check: dict = {}
 
 

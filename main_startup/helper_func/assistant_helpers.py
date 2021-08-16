@@ -15,7 +15,7 @@ import requests
 import wget
 from youtube_dl import YoutubeDL
 import aiofiles
-from main_startup.helper_func.basic_helpers import get_all_pros, is_admin_or_owner
+from main_start.helper_func.basic_helpers import get_all_pros, is_admin_or_owner
 
 
 def _check_admin(func):
