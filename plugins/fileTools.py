@@ -16,7 +16,7 @@ import uuid
 import img2pdf
 from fsplit.filesplit import Filesplit
 
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     get_text,
@@ -25,7 +25,7 @@ from main_start.helper_func.basic_helpers import (
 )
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["chnnlzip", "channelzip"],
     cmd_help={
         "help": "Zips All The Messages/Files/Everything From A Channel/Group",
@@ -116,7 +116,7 @@ def file_list(path, lisT):
     return lisT
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["pdf", "channelpdf"],
     cmd_help={
         "help": "Makes A PDF With All Images In Group/Channel!",
@@ -156,7 +156,7 @@ async def chnnlpdf(client, message):
     await pablo.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["Download"],
     cmd_help={
         "help": "Downloads Replied File To Local Storage!",
@@ -182,7 +182,7 @@ async def Download(client, message):
     await pablo.edit(engine.get_string("FILE_TOOLS_5").format(Escobar, dl_time))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["setthumb"],
     cmd_help={
         "help": "Set Thumbnail For Upload Files!",
@@ -210,7 +210,7 @@ sticker_ext = tuple([".wepb", ".tgs"])
 song_ext = tuple([".mp3", ".wav", ".m4a"])
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["Upload"],
     cmd_help={
         "help": "Upload Internal File!",

@@ -10,11 +10,11 @@ from pyrogram import filters
 
 from database.notesdb import add_note, all_note, del_note, del_notes, note_info
 from main_start.config_var import Config
-from main_start.core.decorators import friday_on_cmd, listen
+from main_start.core.decorators import speedo_on_cmd, listen
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["savenote"],
     cmd_help={
         "help": "Save Notes In The Chat!",
@@ -57,7 +57,7 @@ async def lmao(client, message):
     
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["delnote"],
     cmd_help={"help": "Delete Note In The Chat!", "example": "{ch}delnote (Note Name)"},
 )
@@ -76,7 +76,7 @@ async def notes(client, message):
     await note_.edit(engine.get_string("NOT_ADDED").format(note_name))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["delnotes"],
     cmd_help={"help": "Delete All The Notes In The Chat!", "example": "{ch}delnotes"},
 )
@@ -91,7 +91,7 @@ async def noteses(client, message):
     await pablo.edit(engine.get_string("REMOVED_ALL").format("Notes"))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["notes"],
     cmd_help={"help": "List All The Chat Notes!", "example": "{ch}notes"},
 )

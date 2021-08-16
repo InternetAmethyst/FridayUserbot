@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 from PIL import Image
 from pyrogram.types import InputMediaPhoto
 
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text, runcmd, run_in_exc
 from main_start.helper_func.gmdl import googleimagesdownload
 
@@ -32,7 +32,7 @@ if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["lg"],
     cmd_help={
         "help": "Mess The Animated Sticker!",
@@ -117,7 +117,7 @@ def get_img_search_result(imoge: str):
         return None
     return response.headers["Location"]
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["reverse"],
     cmd_help={
         "help": "Reverse Search Images / Stickers Using Google Reverse Search!",
@@ -168,7 +168,7 @@ def ParseSauce(googleurl):
     return results
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["yandex"],
     cmd_help={
         "help": "Reverse Search Images / Stickers Using Yandex Reverse Search!",
@@ -203,7 +203,7 @@ async def yandex_(client, message):
     os.remove(imoge)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["img", "googleimage", "image", "gi"],
     cmd_help={
         "help": "Search Images In Telegram Itself",
@@ -227,7 +227,7 @@ async def img_search(client, message):
     await pablo.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["waifuwrite", "wq"],
     cmd_help={
         "help": "Make Cool Stickers Using @stickerizerbot",

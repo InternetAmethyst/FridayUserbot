@@ -6,7 +6,7 @@
 #
 # All rights reserved.
 
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -15,7 +15,7 @@ from main_start.helper_func.basic_helpers import (
 )
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["updatefirstname", "firstname"],
     cmd_help={
         "help": "Change Your Account First Name!",
@@ -42,7 +42,7 @@ async def bleck_name(client, message):
     await owo.edit(engine.get_string("FIRST_NAME_CHANGED").format("FirstName", new_firstname))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["updatebio", "bio"],
     cmd_help={"help": "Change Your Account Bio!", "example": "{ch}bio (new bio)"},
 )
@@ -64,7 +64,7 @@ async def bleck_bio(client, message):
     await owo.edit(engine.get_string("FIRST_NAME_CHANGED").format("Bio", new_bio))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["updateusername", "username"],
     cmd_help={
         "help": "Change Your Account UserName!",
@@ -88,7 +88,7 @@ async def bleck_username(client, message):
     await owo.edit(engine.get_string("FIRST_NAME_CHANGED").format("Username", new_username))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["updatelastname", "lastname"],
     cmd_help={
         "help": "Change Your Account Last Name!",
@@ -115,7 +115,7 @@ async def bleck_name(client, message):
     await owo.edit(engine.get_string("FIRST_NAME_CHANGED").format("LastName", new_lastname))
     
     
-@friday_on_cmd(
+@speedo_on_cmd(
     ["join"],
     cmd_help={
         "help": "Join A Chat Easily.",
@@ -138,7 +138,7 @@ async def join_(client, message):
         return
     await owo.edit(engine.get_string("JOINED"))
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["leave"],
     group_only=True,
     cmd_help={
@@ -152,7 +152,7 @@ async def leave_(client, message):
     await client.leave_chat(message.chat.id)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["updateppic", "ppic"],
     cmd_help={
         "help": "Change Your Profile Picture!",
@@ -187,7 +187,7 @@ async def bleck_pic(client, message):
     await owo.edit(engine.get_string("PIC_DONE"))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["poll"],
     group_only=True,
     cmd_help={
@@ -214,7 +214,7 @@ async def create_poll(client, message):
     await msg.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["dump"],
     cmd_help={
         "help": "Get Pyrogram Message Dumbs!",
@@ -229,7 +229,7 @@ async def dumb_er(client, message):
     await edit_or_send_as_file(owo, ow, client, "Json-Dump", "Dump", "md")
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["purgeme"],
     cmd_help={
         "help": "Purge Your Own Message Until Given Limit!",
@@ -264,7 +264,7 @@ async def pur_ge_me(client, message):
     await nice_p.edit(PURGED_MY_MSG.format(to_purge))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["invite", "add"],
     cmd_help={
         "help": "Add Users To Channel / Groups!",
@@ -287,7 +287,7 @@ async def add_user_s_to_group(client, message):
     await mg.edit(engine.get_string("ADDED_USER").format(len(user_list)))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["a2c"],
     cmd_help={
         "help": "Add Users To Your Contacts!",

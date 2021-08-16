@@ -17,11 +17,11 @@ from database.filterdb import (
 )
 import re
 from main_start.config_var import Config
-from main_start.core.decorators import friday_on_cmd, listen
+from main_start.core.decorators import speedo_on_cmd, listen
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["delfilter"],
     cmd_help={"help": "Delete A Filter!", "example": "{ch}delfilter (filter name)"},
     group_only=True
@@ -41,7 +41,7 @@ async def del_filterz(client, message):
     await note_.edit(engine.get_string("FILTER_2").format("Filter", note_name))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["filters"],
     cmd_help={"help": "List All The Filters In The Chat!", "example": "{ch}filters"},
     group_only=True
@@ -58,7 +58,7 @@ async def show_filters(client, message):
     await pablo.edit(mag)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["savefilter"],
     cmd_help={
         "help": "Save A Filter!",
@@ -139,7 +139,7 @@ async def is_media(message):
         )
     )
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["delfilters"],
     cmd_help={"help": "Delete All The Filters in chat!", "example": "{ch}delfilters"},
 )

@@ -11,7 +11,7 @@ import os
 
 from telegraph import Telegraph, exceptions, upload_file
 
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 from main_start.helper_func.plugin_helpers import convert_to_image
 
@@ -20,7 +20,7 @@ r = telegraph.create_account(short_name="FridayUserBot")
 auth_url = r["auth_url"]
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["telegraph"],
     cmd_help={
         "help": "Get Telegraph link of replied image",

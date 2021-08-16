@@ -20,12 +20,12 @@ from pyrogram.errors import StickersetInvalid, YouBlockedUser
 from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
 
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 from main_start.helper_func.plugin_helpers import convert_to_image
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["packinfo"],
     cmd_help={
         "help": "Get Sticker Pack Info!",
@@ -67,7 +67,7 @@ async def packinfo(client, message):
     await pablo.edit(output)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["kang"],
     cmd_help={
         "help": "Get Sticker Pack Info!",

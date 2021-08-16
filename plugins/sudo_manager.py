@@ -10,7 +10,7 @@
 from pyrogram import filters
 
 from main_start.config_var import Config
-from main_start.core.decorators import friday_on_cmd, listen
+from main_start.core.decorators import speedo_on_cmd, listen
 from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -23,7 +23,7 @@ from database.sudodb import is_user_sudo, sudo_list, add_sudo, rm_sudo
 from plugins import devs_id
 
 
-@friday_on_cmd(['addsudo'],
+@speedo_on_cmd(['addsudo'],
               disable_sudo=True,
               cmd_help={
                 "help": "Add User To Sudo List.",
@@ -50,7 +50,7 @@ async def add_s_sudo(client, message):
     await add_sudo(int(user.id))
     await msg_.edit(engine.get_string("ADDED_TO_SUDO").format(user.mention))
     
-@friday_on_cmd(['rmsudo'],
+@speedo_on_cmd(['rmsudo'],
               disable_sudo=True,
               cmd_help={
                 "help": "Remove User From Sudo List.",

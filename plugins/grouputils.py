@@ -14,7 +14,7 @@ from asyncio import sleep
 
 from pyrogram.types import ChatPermissions
 import pyrogram
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -30,7 +30,7 @@ from main_start.helper_func.plugin_helpers import (
 )
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["silentpin"],
     only_if_admin=True,
     cmd_help={
@@ -56,7 +56,7 @@ async def spin(client, message):
     await edit_or_reply(message, engine.get_string("PINNED"))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["pinloud", "pin"],
     only_if_admin=True,
     cmd_help={
@@ -80,7 +80,7 @@ async def lpin(client, message):
     await edit_or_reply(message, engine.get_string("PINNED"))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["unpin", "rmpins"],
     only_if_admin=True,
     cmd_help={"help": "Unpin All Pinned Messages!", "example": "{ch}rmpins"},
@@ -91,7 +91,7 @@ async def dpins(client, message):
     await edit_or_reply(message, engine.get_string("UNPINNED"))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["adminlist", "admins"],
     cmd_help={"help": "Get Adminlist Of Chat!", "example": "{ch}adminlist"},
 )
@@ -127,7 +127,7 @@ async def midhunadmin(client, message):
     )
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["botlist", "bot"],
     group_only=True,
     cmd_help={"help": "Get List Of Bots In Chat!", "example": "{ch}botlist"},
@@ -147,7 +147,7 @@ async def bothub(client, message):
     await pablo.edit(buts)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["zombies", "delusers"],
     cmd_help={
         "help": "Remove Deleted Accounts In The Group/Channel!",
@@ -208,7 +208,7 @@ async def ujwalzombie(client, message):
         await pablo.edit(text)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["ban", "bun"],
     only_if_admin=True,
     group_only=True,
@@ -257,7 +257,7 @@ async def ban_world(client, message):
     await log.log_msg(client, b)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["unban", "unbun"],
     only_if_admin=True,
     group_only=True,
@@ -302,7 +302,7 @@ async def unban_world(client, message):
     await log.log_msg(client, ub)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["promote", "prumote"],
     only_if_admin=True,
     group_only=True,
@@ -362,7 +362,7 @@ async def ujwal_mote(client, message):
         pass
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["demote", "demute"],
     only_if_admin=True,
     group_only=True,
@@ -415,7 +415,7 @@ async def ujwal_demote(client, message):
     await log.log_msg(client, d)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["mute"],
     only_if_admin=True,
     group_only=True,
@@ -461,7 +461,7 @@ async def ujwal_mute(client, message):
     await log.log_msg(client, m)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["unmute"],
     only_if_admin=True,
     group_only=True,
@@ -507,7 +507,7 @@ async def ujwal_unmute(client, message):
     await log.log_msg(client, um)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["chatinfo", "grpinfo"],
     group_only=True,
     cmd_help={"help": "Get Info Of The Chat!", "example": "{ch}chatinfo"},
@@ -539,7 +539,7 @@ async def owo_chat_info(client, message):
         await s.edit(msg)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["purge"],
     only_if_admin=True,
     cmd_help={
@@ -588,7 +588,7 @@ async def purge(client, message):
     await event.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["del"],
     cmd_help={
         "help": "Delete Replied Message!",
@@ -608,7 +608,7 @@ async def delmsgs(client, message):
     await message.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["setgrppic", "gpic"],
     cmd_help={
         "help": "Set Custom Group Pic, For Lazy Peoples!",

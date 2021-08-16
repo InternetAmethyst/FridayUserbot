@@ -19,7 +19,7 @@ import psutil
 from pyrogram import __version__
 
 from main_start import Config, friday_version, start_time
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import (
     delete_or_pass,
     edit_or_reply,
@@ -28,7 +28,7 @@ from main_start.helper_func.basic_helpers import (
 )
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["ping", "pong"],
     cmd_help={"help": "Check Bot Uptime!", "example": "{ch}ping"},
 )
@@ -45,7 +45,7 @@ async def pingy(client, message):
     )
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["alive"],
     cmd_help={"help": "Get Alive Message Of Your Bot.!", "example": "{ch}alive"},
 )
@@ -68,7 +68,7 @@ async def amialive(client, message):
     await delete_or_pass(message)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["sysinfo", "neofetch"],
     cmd_help={"help": "Get System Information!", "example": "{ch}sysinfo"},
 )
@@ -109,7 +109,7 @@ async def give_sysinfo(client, message):
     await edit_or_reply(message, neat_msg)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["restart"],
     cmd_help={"help": "Restart Your Bot!", "example": "{ch}restart"},
 )

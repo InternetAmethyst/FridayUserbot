@@ -16,7 +16,7 @@ import heroku3
 from pyrogram.types import ChatPermissions
 
 from main_start.config_var import Config
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -52,7 +52,7 @@ def _check_heroku(func):
     return heroku_cli
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["reboot"],
     cmd_help={"help": "Restart Your Userbot On HEROKU!", "example": "{ch}restart"},
 )
@@ -63,7 +63,7 @@ async def gib_restart(client, message, hap):
     hap.restart()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["logs"], cmd_help={"help": "Get Logs From HEROKU!", "example": "{ch}logs"}
 )
 @_check_heroku
@@ -75,7 +75,7 @@ async def gib_logs(client, message, happ):
     await edit_or_send_as_file(logs, msg_, client, capt, "logs")
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["setvar"],
     cmd_help={
         "help": "Set Var From telegram Itself, Please Seperate Var And Value With '|'",
@@ -105,7 +105,7 @@ async def set_varr(client, message, app_):
     heroku_var[_varname] = _varvalue
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["delvar"],
     cmd_help={
         "help": "Delete Var From telegram Itself",

@@ -10,7 +10,7 @@ import os
 
 from database.gbandb import gban_info, gban_list, gban_user, ungban_user
 from database.gmutedb import gmute, is_gmuted, ungmute
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -21,7 +21,7 @@ from main_start.helper_func.basic_helpers import (
 from plugins import devs_id
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["get_id"],
     cmd_help={"help": "Get Current Chat ID!", "example": "{ch}get_id"},
 )
@@ -30,7 +30,7 @@ async def wew_id(client, message):
     pablo = await edit_or_reply(message, t_xt)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["info", "whois"],
     cmd_help={"help": "Get Info About A User", "example": "{ch}info @chsaiujwal"},
 )

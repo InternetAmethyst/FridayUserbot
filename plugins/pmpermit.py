@@ -20,7 +20,7 @@ from database.bot_settings_db import (
     set_pm_spam_limit,
 )
 from database.pmdb import approve_user, disapprove_user, is_user_approved
-from main_start.core.decorators import friday_on_cmd, listen
+from main_start.core.decorators import speedo_on_cmd, listen
 from main_start import Config
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 from main_start.helper_func.logger_s import LogIt
@@ -33,7 +33,7 @@ from plugins import devs_id
 
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["setpmtext"],
     cmd_help={
         "help": "Set Custom On Text!",
@@ -64,7 +64,7 @@ async def set_custom_pm_texts(client, message):
     await message.edit(engine.get_string("PM_MSG_CHANGED").format(ptext))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["setpmlimit"],
     cmd_help={
         "help": "Set Pm Limit!",
@@ -91,7 +91,7 @@ async def set_custom_pm_limit(client, message):
     await message.edit(engine.get_string("SUCCESS_CHANGED").format(ptext))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["block"],
     cmd_help={
         "help": "Block Replied User!",
@@ -129,7 +129,7 @@ async def blockz(client, message):
         await message.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["unblock"],
     cmd_help={
         "help": "Unblock Replied Uset!",
@@ -157,7 +157,7 @@ async def unmblock(client, message):
         await message.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["a", "accept", "allow"],
     cmd_help={
         "help": "Allow User To Pm you!",
@@ -210,7 +210,7 @@ async def allow(client, message):
         await message.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["da", "disaccept", "disallow", "disapprove"],
     cmd_help={
         "help": "Disallow User To Pm you!",
@@ -263,7 +263,7 @@ async def disallow(client, message):
         await message.delete()
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["setpmpic", "spp"],
     cmd_help={
         "help": "Set Replied Image As Your Pm Permit Image.",

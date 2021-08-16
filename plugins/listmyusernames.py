@@ -8,11 +8,11 @@
 
 import pyrogram
 
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import edit_or_reply, edit_or_send_as_file
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["listmyusernames"],
     cmd_help={
         "help": "Get All Admin Channel / Chat List",

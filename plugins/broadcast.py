@@ -14,11 +14,11 @@ from database.broadcast_db import (
     is_broadcast_chat_in_db,
     rmbroadcast_chat,
 )
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["badd"],
     cmd_help={
         "help": "Add Group/Channel For Broadcast!. Give input as 'all' to add all.",
@@ -63,7 +63,7 @@ async def badd(client, message):
         await pablo.edit(engine.get_string("BROADCAST_3").format(bd))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["brm"],
     cmd_help={
         "help": "Remove Group/Channel From Broadcast dB!. Give input as 'all' to Remove all.",
@@ -98,7 +98,7 @@ async def brm(client, message):
         await pablo.edit(engine.get_string("BROADCAST_4").format(bd))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["broadcast"],
     cmd_help={
         "help": "Broadcast Message In All Groups/Channels which are added in dB.",

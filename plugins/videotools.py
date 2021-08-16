@@ -9,7 +9,7 @@
 import os
 import time
 
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.core.startup_helpers import run_cmd
 from main_start.helper_func.basic_helpers import (
     edit_or_reply,
@@ -20,7 +20,7 @@ from main_start.helper_func.basic_helpers import (
 from main_start.helper_func.plugin_helpers import convert_vid_to_vidnote
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["getsrt", "extractsubtitle"],
     cmd_help={
         "help": "Get Subtitle / Srt from Any Video",
@@ -65,7 +65,7 @@ async def get_str(client, message):
             os.remove(files)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["fastforward"],
     cmd_help={
         "help": "Make Any Video / Gif Fast! (Fast Forward)",
@@ -112,7 +112,7 @@ async def hell_speed_s(client, message):
             os.remove(files)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["slowdown"],
     cmd_help={
         "help": "Make Any Video / Gif Slow! (Slow Down)",
@@ -159,7 +159,7 @@ async def fking_slow(client, message):
             os.remove(files)
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["vidnote"],
     cmd_help={
         "help": "Make Any Video / Gif To Video Note",

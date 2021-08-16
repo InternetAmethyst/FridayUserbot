@@ -69,10 +69,10 @@ $ python(3) -m main_startup
 ### Plugins 🔧
 
 ```python3
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.basic_helpers import edit_or_reply
 
-@friday_on_cmd(['helloworld'],
+@speedo_on_cmd(['helloworld'],
     cmd_help={
     "help": "This is A TEST",
     "example": "{ch}helloworld"

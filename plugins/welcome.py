@@ -10,11 +10,11 @@ from pyrogram import filters
 
 from database.welcomedb import add_welcome, del_welcome, welcome_info
 from main_start.config_var import Config
-from main_start.core.decorators import friday_on_cmd, listen
+from main_start.core.decorators import speedo_on_cmd, listen
 from main_start.helper_func.basic_helpers import edit_or_reply
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["savewelcome"],
     cmd_help={
         "help": "Save Welcome Message!",
@@ -86,7 +86,7 @@ async def is_media(message):
     )
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["delwelcome"],
     cmd_help={"help": "Delete welcome Message!", "example": "{ch}delwelcome"},
 )
@@ -100,7 +100,7 @@ async def del_welcomez(client, message):
     await note_.edit(engine.get_string("FILTER_2").format("Welcome", "Message"))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["welcome"],
     cmd_help={"help": "Current Welcome Message!", "example": "{ch}welcome"},
 )

@@ -13,7 +13,7 @@ import requests
 import wget
 from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.helper_func.assistant_helpers import _dl
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text, progress, humanbytes, run_in_exc, time_formatter
 import threading
@@ -86,7 +86,7 @@ def yt_dl(url, client, message, type_):
     return file_name, ytdl_data
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["yt", "ytdl"],
     cmd_help={
         "help": "Download YouTube Videos / Audio just with name!",

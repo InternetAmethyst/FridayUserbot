@@ -15,7 +15,7 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from main_start.config_var import Config
-from main_start.core.decorators import friday_on_cmd, listen
+from main_start.core.decorators import speedo_on_cmd, listen
 from main_start.core.startup_helpers import run_cmd
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 from main_start.helper_func.logger_s import LogIt
@@ -24,7 +24,7 @@ REPO_ = Config.UPSTREAM_REPO
 BRANCH_ = Config.U_BRANCH
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["update"], cmd_help={"help": "Update Your UserBot!", "example": "{ch}update"}
 )
 async def update_it(client, message):

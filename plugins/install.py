@@ -8,12 +8,12 @@
 
 import os
 
-from main_start.core.decorators import friday_on_cmd
+from main_start.core.decorators import speedo_on_cmd
 from main_start.core.startup_helpers import load_plugin
 from main_start.helper_func.basic_helpers import edit_or_reply
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["install"],
     cmd_help={
         "help": "Install Custom Plugins In Userbot",

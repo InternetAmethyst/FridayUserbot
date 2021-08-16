@@ -16,11 +16,11 @@ from database.autopostingdb import (
     del_autopost,
     get_autopost,
 )
-from main_start.core.decorators import friday_on_cmd, listen
+from main_start.core.decorators import speedo_on_cmd, listen
 from main_start.helper_func.basic_helpers import edit_or_reply, get_text
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["autopost"],
     cmd_help={
         "help": "Add Channel To AutoPost List!",
@@ -52,7 +52,7 @@ async def autopost(client, message):
     await mess_age_.edit(engine.get_string("AUTOPOSTING_1").format(chnnl))
 
 
-@friday_on_cmd(
+@speedo_on_cmd(
     ["rmautopost"],
     cmd_help={
         "help": "Remove A Channel From Autopost List",
