@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "from main_startup"
+          find: "fridaysupportofficial"
 
-          replace: "from main_start"
+          replace: "speedoub"
 
       - name: Create Pull Request
 
